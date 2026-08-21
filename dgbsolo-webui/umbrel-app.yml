@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: dgbsolo-webui
+name: DGB Solo WebUI
+tagline: Dashboard profissional para a DGB Solo Pool
+icon: https://raw.githubusercontent.com/SEU_USUARIO/dgbsolo-app-store/master/dgbsolo-webui/icon.svg
+category: bitcoin
+version: "1.0.0"
+port: 8088
+description: >-
+  Interface profissional para MiningCore com dashboard, miners, blocks,
+  pagamentos e consulta por carteira.
+developer: DGB Solo
+website: https://digibyte.org/
+submitter: DGB Solo
+submission: https://github.com/SEU_USUARIO/dgbsolo-app-store
+repo: https://github.com/SEU_USUARIO/dgbsolo-app-store
+support: https://github.com/SEU_USUARIO/dgbsolo-app-store/issues
+gallery: []
+releaseNotes: Initial release
+dependencies: []
+path: ""

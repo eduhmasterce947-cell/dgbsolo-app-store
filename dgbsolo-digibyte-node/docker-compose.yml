@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dgbsolo-digibyte-node_web_1
+      APP_PORT: 80
+
+  node:
+    image: ghcr.io/SEU_USUARIO/dgbsolo-digibyte:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data/digibyte:/data
+      - ${APP_DATA_DIR}/data/digibyte.conf:/config/digibyte.conf
+    ports:
+      - "9001:9001"
+      - "7001:7001"
+      - "12024:12024"
+    networks:
+      - umbrel_main_network
+
+  web:
+    image: nginx:alpine
+    restart: on-failure
+    command: >
+      /bin/sh -c "printf '<html><body style="font-family:sans-serif;background:#05070a;color:#fff;padding:40px">
+      <h1>DGB Solo DigiByte Node</h1><p>Node service installed.</p>
+      <p>RPC: 9001</p><p>ZMQ: 7001</p><p>P2P: 12024</p></body></html>'
+      > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+    networks:
+      - umbrel_main_network
+
+networks:
+  umbrel_main_network:
+    external: true

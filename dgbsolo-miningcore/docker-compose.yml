@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dgbsolo-miningcore_server_1
+      APP_PORT: 4000
+      PROXY_AUTH_WHITELIST: "/api/*"
+
+  server:
+    image: ghcr.io/SEU_USUARIO/dgbsolo-miningcore:latest
+    restart: on-failure
+    stop_grace_period: 30s
+    volumes:
+      - ${APP_DATA_DIR}/data/miningcore:/app/miningcore
+    ports:
+      - "4000:4000"
+      - "6001:6001"
+    networks:
+      - umbrel_main_network
+
+networks:
+  umbrel_main_network:
+    external: true

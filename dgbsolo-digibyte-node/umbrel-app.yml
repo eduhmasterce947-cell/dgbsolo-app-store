@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: dgbsolo-digibyte-node
+name: DGB Solo DigiByte Node
+tagline: Node DigiByte dedicado para mineração SHA-256
+icon: https://raw.githubusercontent.com/SEU_USUARIO/dgbsolo-app-store/master/dgbsolo-digibyte-node/icon.svg
+category: bitcoin
+version: "1.0.0"
+port: 5006
+description: >-
+  Node DigiByte com RPC e ZMQ para integração com MiningCore.
+developer: DGB Solo
+website: https://digibyte.org/
+submitter: DGB Solo
+submission: https://github.com/SEU_USUARIO/dgbsolo-app-store
+repo: https://github.com/SEU_USUARIO/dgbsolo-app-store
+support: https://github.com/SEU_USUARIO/dgbsolo-app-store/issues
+gallery: []
+releaseNotes: Initial release
+dependencies: []
+path: ""

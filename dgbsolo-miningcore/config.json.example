@@ -1,0 +1,66 @@
+{
+  "logging": {
+    "level": "info",
+    "enableConsoleLog": true,
+    "enableConsoleColors": true,
+    "perPoolLogFile": true
+  },
+  "persistence": {
+    "postgres": {
+      "host": "dgbsolo-postgres_db_1",
+      "port": 5432,
+      "user": "miningcore",
+      "password": "miningcore",
+      "database": "miningcore"
+    }
+  },
+  "paymentProcessing": {
+    "enabled": true,
+    "interval": 600,
+    "shareRecoveryFile": "recovered-shares.txt",
+    "coinbaseString": "Mined by DGB Solo"
+  },
+  "api": {
+    "enabled": true,
+    "listenAddress": "*",
+    "port": 4000
+  },
+  "pools": [
+    {
+      "id": "dgb",
+      "enabled": true,
+      "coin": "digibyte-sha256",
+      "address": "CHANGE_TO_YOUR_DGB_ADDRESS",
+      "ports": {
+        "6001": {
+          "name": "DGB SHA256 SOLO",
+          "listenAddress": "0.0.0.0",
+          "difficulty": 1024,
+          "varDiff": {
+            "minDiff": 512,
+            "targetTime": 15,
+            "retargetTime": 90,
+            "variancePercent": 30
+          }
+        }
+      },
+      "daemons": [
+        {
+          "host": "dgbsolo-digibyte-node_node_1",
+          "port": 9001,
+          "user": "pooluser",
+          "password": "CHANGE_THIS_PASSWORD",
+          "zmqBlockNotifySocket": "tcp://dgbsolo-digibyte-node_node_1:7001"
+        }
+      ],
+      "paymentProcessing": {
+        "enabled": true,
+        "minimumPayment": 0.001,
+        "payoutScheme": "SOLO",
+        "payoutSchemeConfig": {
+          "factor": 2
+        }
+      }
+    }
+  ]
+}

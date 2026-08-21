@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: dgbsolo-postgres
+name: DGB Solo PostgreSQL
+tagline: Banco de dados dedicado para a DGB Solo Pool
+icon: https://raw.githubusercontent.com/SEU_USUARIO/dgbsolo-app-store/master/dgbsolo-postgres/icon.svg
+category: developer
+version: "1.0.0"
+port: 5432
+description: >-
+  PostgreSQL 16 dedicado ao MiningCore da DGB Solo Pool.
+developer: DGB Solo
+website: https://digibyte.org/
+submitter: DGB Solo
+submission: https://github.com/SEU_USUARIO/dgbsolo-app-store
+repo: https://github.com/SEU_USUARIO/dgbsolo-app-store
+support: https://github.com/SEU_USUARIO/dgbsolo-app-store/issues
+gallery: []
+releaseNotes: Initial release
+dependencies: []
+path: ""
+defaultUsername: miningcore
+defaultPassword: miningcore
