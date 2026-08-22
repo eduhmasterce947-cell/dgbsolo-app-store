@@ -2,7 +2,7 @@ manifestVersion: 1
 id: dgbsolo-digibyte-node
 name: DGB Solo DigiByte Node
 tagline: Node DigiByte dedicado para mineração SHA-256
-icon: https://raw.githubusercontent.com/SEU_USUARIO/dgbsolo-app-store/master/dgbsolo-digibyte-node/icon.svg
+icon: https://raw.githubusercontent.com/eduhmasterce947-cell/dgbsolo-app-store/master/dgbsolo-digibyte-node/icon.svg
 category: bitcoin
 version: "1.0.0"
 port: 5006
