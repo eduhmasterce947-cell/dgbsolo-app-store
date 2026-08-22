@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: ghcr.io/eduhmasterce947-cell/dgbsolo-webui:latest@sha256:COLE_O_DIGEST_AQUI
+    image: ghcr.io/eduhmasterce947-cell/dgbsolo-webui:latest
     restart: on-failure
     stop_grace_period: 15s
     networks:
