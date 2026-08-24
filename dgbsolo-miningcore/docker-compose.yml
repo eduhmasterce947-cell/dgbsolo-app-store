@@ -8,17 +8,14 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   server:
-    image: ghcr.io/SEU_USUARIO/dgbsolo-miningcore:latest
+    image: ghcr.io/eduhmasterce947-cell/dgbsolo-miningcore:latest
     restart: on-failure
     stop_grace_period: 30s
+
     volumes:
-      - ${APP_DATA_DIR}/data/miningcore:/app/miningcore
+      - ${APP_DATA_DIR}/data/config.json:/app/config.json:ro
+      - ${APP_DATA_DIR}/data/coins.json:/app/build/coins.json:ro
+
     ports:
       - "4000:4000"
       - "6001:6001"
-    networks:
-      - umbrel_main_network
-
-networks:
-  umbrel_main_network:
-    external: true
