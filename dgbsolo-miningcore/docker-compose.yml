@@ -17,5 +17,4 @@ services:
       - ${APP_DATA_DIR}/data/coins.json:/app/build/coins.json:ro
 
     ports:
-      - "4000:4000"
       - "6001:6001"
